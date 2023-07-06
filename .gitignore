@@ -1,0 +1,13 @@
+node_modules/
+.node_modules/
+**/.DS_Store
+.settings
+**/.vs
+**/.vscode/*
+!**/.vscode/settings.json
+.idea
+yarn.lock
+yarn-error.log
+package-lock.json
+.eslintcache
+dist/
