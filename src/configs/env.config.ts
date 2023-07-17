@@ -1,7 +1,6 @@
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
-import Logger from '../utils/logger.util';
 
 // Define all the environment files - Start
 const defaultEnv = 'environments/.env';
@@ -29,7 +28,7 @@ const getEnvFile = (environment: string): string => {
 	}
 };
 
-// Get the current environment. Can be null.
+// Get the current environment. Can be undefined.
 export const getEnvironment = (): string | undefined => {
 	return getEnvValue('NODE_ENV');
 };
@@ -48,5 +47,3 @@ dotenv.config({
 dotenv.config({
 	path: path.resolve(process.cwd(), getEnvFile(getEnvironment() as string)),
 });
-
-Logger.info(`Active environment: ${getEnvironment()}`);

@@ -5,9 +5,12 @@ node_modules/
 **/.vs
 **/.vscode/*
 !**/.vscode/settings.json
+!**/.vscode/launch.json
 .idea
 yarn.lock
 yarn-error.log
 package-lock.json
 .eslintcache
 dist/
+*.log
+.*-audit.json
